@@ -3,15 +3,17 @@ import { openAuthMiniApp } from "dingtalk-design-libs/biz/openAuthMiniApp";
 import axios from 'axios';
 
 function App() {
-  // 后端服务url
-  const host = "http://127.0.0.1:8080/";
+  //内网穿透工具介绍:
+  // https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration?pnamespace=app
+  // 替换成后端服务域名
+  const host = "http://localhost:8080/";
   const openMiniApp = () => {
     openAuthMiniApp({
       panelHeight: "percent75",
       path: "pages/home/home", //不要改,这里是小程序dingwlanwvdmrtjjwdmd下的一个页面地址
       extraData: {
-        clientId: "ding8clxwy9wxeom7bie", // 应用ID(唯一标识)
-        corpId: "ding9f50b15bccd16741", //三方企业ID
+        clientId: "*", // 应用ID(唯一标识)
+        corpId: "*", //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
         type: 0,
