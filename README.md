@@ -7,7 +7,7 @@
 
 ##### 申请个人手机号信息权限
 
-![image-20210611162753497](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611162753497.png)
+![image-20210611162753497](images/image-20210611162753497.png)
 
 ##### 申请通讯录个人信息读取权限
 
