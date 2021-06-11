@@ -27,7 +27,7 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 
 ### 修改后端服务域名&clientId
 
-![image-20210611174955471](images/image-20210611174955471.png)
+![image-20210611174955471](./images/image-20210611174955471.png)
 
 ### 使用命令行安装依赖&打包
 
