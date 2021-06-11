@@ -27,7 +27,7 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 
 ### 修改后端服务域名&clientId
 
-![image-20210611174955471](./images/image-20210611174955471.png)
+![image-20210611174955471](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611174955471.png)
 
 ### 使用命令行安装依赖&打包
 
@@ -35,33 +35,33 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 cd fronted/
 ```
 
-![image-20210611175141368](images/image-20210611175141368.png)
+![image-20210611175141368](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611175141368.png)
 
 ```txt
 npm install
 ```
 
-![image-20210611175759916](images/image-20210611175759916.png)
+![image-20210611175759916](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611175759916.png)
 
 ```txt
 npm run build
 ```
 
-![image-20210611172741024](images/image-20210611172741024.png)
+![image-20210611172741024](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611172741024.png)
 
 ### 将打包好的静态资源文件放入后端服务
 
-![image-20210611174038829](images/image-20210611174038829.png)
+![image-20210611174038829](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611174038829.png)
 
 ### 替换应用配置
 
-![image-20210611175938467](images/image-20210611175938467.png)
+![image-20210611175938467](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611175938467.png)
 
 ### 启动项目使用钉钉访问服务
 
-![IMG_0768](images/IMG_0768.PNG)
+![IMG_0768](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/IMG_0768.PNG)
 
-![IMG_0770](images/IMG_0770.PNG)
+![IMG_0770](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/IMG_0770.PNG)
 
 ### 参考文档
 
