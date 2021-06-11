@@ -1,14 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import './App.css';
 import { openAuthMiniApp } from "dingtalk-design-libs/biz/openAuthMiniApp";
+import axios from 'axios';
+
 function App() {
+  // 后端服务url
+  const host = "http://127.0.0.1:8080/";
   const openMiniApp = () => {
     openAuthMiniApp({
       panelHeight: "percent75",
       path: "pages/home/home", //不要改,这里是小程序dingwlanwvdmrtjjwdmd下的一个页面地址
       extraData: {
-        clientId: "dingwlanwvdmrtjjwdmd", // 应用ID(唯一标识)
+        clientId: "ding8clxwy9wxeom7bie", // 应用ID(唯一标识)
         corpId: "ding9f50b15bccd16741", //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
@@ -18,15 +20,23 @@ function App() {
       },
     }).then((res) => {
       // 处理返回数据
-      console.log(res);
-    });
-  };
+      axios.get(host + "user?authCode=" + res.result.authCode)
+          .then(response => {
+            alert(JSON.stringify(response))
+            // console.log(response)
+          })
+          .catch(error => {
+            alert(JSON.stringify(error))
+            // console.log(error.message)
+          })
+    })
+  }
 
   const cancelMiniApp = () => {
     openAuthMiniApp({
       path: "pages/cancel/index",
       extraData: {
-        clientId: "dingwlanwvdmrtjjwdmd", // 应用ID(唯一标识)
+        clientId: "ding8clxwy9wxeom7bie", // 应用ID(唯一标识)
         corpId: "ding9f50b15bccd16741", //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
@@ -42,20 +52,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <button onClick={openMiniApp}>打开授权弹窗</button>
         <button onClick={cancelMiniApp}>打开取消授权弹窗</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
