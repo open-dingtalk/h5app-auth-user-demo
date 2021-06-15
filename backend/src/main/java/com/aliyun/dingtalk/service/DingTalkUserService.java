@@ -4,7 +4,6 @@ import com.aliyun.dingtalkcontact_1_0.Client;
 import com.aliyun.dingtalkcontact_1_0.models.GetUserHeaders;
 import com.aliyun.dingtalkcontact_1_0.models.GetUserResponse;
 import com.aliyun.dingtalkcontact_1_0.models.GetUserResponseBody;
-import com.aliyun.dingtalkoauth2_1_0.models.GetUserTokenResponseBody;
 import com.aliyun.dingtalk.config.AppConfig;
 import com.aliyun.dingtalk.enums.GrantTypeEnum;
 import com.aliyun.dingtalk.util.AccessTokenUtil;
