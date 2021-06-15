@@ -6,7 +6,7 @@ function App() {
   //内网穿透工具介绍:
   // https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration?pnamespace=app
   // 替换成后端服务域名
-  const host = "http://localhost:8080/";
+  const domain = "http://localhost:8080/";
   const openMiniApp = () => {
     openAuthMiniApp({
       panelHeight: "percent75",
@@ -22,7 +22,7 @@ function App() {
       },
     }).then((res) => {
       // 处理返回数据
-      axios.get(host + "user?authCode=" + res.result.authCode)
+      axios.get(domain + "user?authCode=" + res.result.authCode)
           .then(response => {
             alert(JSON.stringify(response))
             // console.log(response)

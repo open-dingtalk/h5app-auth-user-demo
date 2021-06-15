@@ -44,7 +44,7 @@ public class AccessTokenUtil {
      * @param grantType
      * @return
      */
-    public static GetUserTokenResponseBody getUserAccessToken(String appKey, String appSecret, String authCode, String refreshToken, String grantType) {
+    public static String getUserAccessToken(String appKey, String appSecret, String authCode, String refreshToken, String grantType) {
 
         try {
             Client client = createClient();
@@ -57,16 +57,18 @@ public class AccessTokenUtil {
             GetUserTokenResponse response = client.getUserToken(getUserTokenRequest);
             if (!Objects.isNull(response)) {
                 GetUserTokenResponseBody body = response.getBody();
-                return body;
+                return body.getAccessToken();
             } else {
                 log.error("获取user_access_token响应为空！");
             }
         } catch (TeaException err) {
+            // 需要自己处理异常
             if (!Common.empty(err.code) && !Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
             }
 
         } catch (Exception _err) {
+            // 需要自己处理异常
             TeaException err = new TeaException(_err.getMessage(), _err);
             if (!Common.empty(err.code) && !Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
