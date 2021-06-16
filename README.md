@@ -7,11 +7,11 @@
 
 ##### 申请个人手机号信息权限
 
-![image-20210611162753497](images/image-20210611162753497.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/c5bb93ff04d14f8281b637437264905f2460.png)
 
 ##### 申请通讯录个人信息读取权限
 
-![image-20210611163056185](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611163056185.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/42805a9279204d9c98c0b605fe8c326a2460.png)
 
 
 
@@ -25,9 +25,9 @@ git clone
 https://github.com/open-dingtalk/h5app-auth-user-demo.git
 ```
 
-### 修改后端服务域名&clientId
+### 修改后端服务域名&clientId&corpId
 
-![image-20210611174955471](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611174955471.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/6ec5fb1993df4d06a9b5c35e2489cf6b2460.png)
 
 ### 使用命令行安装依赖&打包
 
@@ -35,33 +35,33 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 cd fronted/
 ```
 
-![image-20210611175141368](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611175141368.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/3649214819e947a2852628380b05b84a2460.png)
 
 ```txt
 npm install
 ```
 
-![image-20210611175759916](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611175759916.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/b1c957a13774471dad7e997697ac6ebe2460.png)
 
 ```txt
 npm run build
 ```
 
-![image-20210611172741024](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611172741024.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/787534cb80df4e1ea4b001498c3133e32460.png)
 
 ### 将打包好的静态资源文件放入后端服务
 
-![image-20210611174038829](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611174038829.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/007d4f9cab004616afddf803109b79af2460.png)
 
 ### 替换应用配置
 
-![image-20210611175938467](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/image-20210611175938467.png)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/6e560e7afc9a434f8e659cf3859374cc2460.png)
 
 ### 启动项目使用钉钉访问服务
 
-![IMG_0768](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/IMG_0768.PNG)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/01029527c5ab4ba2b0d296d2ae4f59772460.png)
 
-![IMG_0770](https://github.com/open-dingtalk/h5app-auth-user-demo/blob/master/images/IMG_0770.PNG)
+![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/a328aed617334cc6ad2bd4de472289242460.png)
 
 ### 参考文档
 

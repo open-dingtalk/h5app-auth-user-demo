@@ -28,7 +28,7 @@ public class DingTalkUserController {
     /**
      * 根据临时授权码,获取user_access_token,根据user_access_token获取用户信息
      *
-     * @param authCode 临时授权码
+     * @param authCode 免登授权码
      * @return
      */
     @GetMapping("/user")
