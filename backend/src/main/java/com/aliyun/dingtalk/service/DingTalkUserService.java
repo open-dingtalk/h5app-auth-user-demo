@@ -39,7 +39,7 @@ public class DingTalkUserService {
 
     public GetUserResponseBody getUserInfo(String authCode) throws Exception {
 
-        // 根据临时授权码、获取用户访问token
+        // 根据免登授权码、获取用户访问token
         String accessToken = AccessTokenUtil.getUserAccessToken(appConfig.getAppKey(), appConfig.getAppSecret(), authCode, null, GrantTypeEnum.AUTHORIZATION_CODE.getName());
 
         // 创建client
