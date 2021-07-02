@@ -1,7 +1,7 @@
 package com.aliyun.dingtalk.controller;
 
 import com.aliyun.dingtalk.service.DingTalkUserService;
-import com.aliyun.dingtalk.model.RpcServiceResult;
+import com.aliyun.dingtalk.model.ServiceResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -32,11 +32,8 @@ public class DingTalkUserController {
      * @return
      */
     @GetMapping("/user")
-    public RpcServiceResult user(@RequestParam(value = "authCode") String authCode) {
-        try {
-            return RpcServiceResult.getSuccessResult(dingTalkUserService.getUserInfo(authCode));
-        } catch (Exception ex) {
-            return RpcServiceResult.getFailureResult("-1", "get dingTalkUserInfo exception");
-        }
+    public ServiceResult user(@RequestParam(value = "authCode") String authCode) {
+        return ServiceResult.getSuccessResult(dingTalkUserService.getUserInfo(authCode));
+
     }
 }

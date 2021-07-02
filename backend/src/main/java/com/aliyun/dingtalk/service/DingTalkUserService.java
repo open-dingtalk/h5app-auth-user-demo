@@ -1,5 +1,6 @@
 package com.aliyun.dingtalk.service;
 
+import com.aliyun.dingtalk.exception.InvokeDingTalkException;
 import com.aliyun.dingtalkcontact_1_0.Client;
 import com.aliyun.dingtalkcontact_1_0.models.GetUserHeaders;
 import com.aliyun.dingtalkcontact_1_0.models.GetUserResponse;
@@ -29,6 +30,7 @@ public class DingTalkUserService {
 
     @Autowired
     private AppConfig appConfig;
+
     // 创建获取 dingtalkcontact client
     public Client createClient() throws Exception {
         Config config = new Config();
@@ -37,39 +39,30 @@ public class DingTalkUserService {
         return new Client(config);
     }
 
-    public GetUserResponseBody getUserInfo(String authCode) throws Exception {
+    public GetUserResponseBody getUserInfo(String authCode) {
 
-        // 根据免登授权码、获取用户访问token
-        String accessToken = AccessTokenUtil.getUserAccessToken(appConfig.getAppKey(), appConfig.getAppSecret(), authCode, null, GrantTypeEnum.AUTHORIZATION_CODE.getName());
-
-        // 创建client
-        Client client = createClient();
-        // 设置user_access_token到header
-        GetUserHeaders getUserHeaders = new GetUserHeaders();
-        getUserHeaders.xAcsDingtalkAccessToken = accessToken;
         try {
+            // 根据免登授权码、获取用户访问token
+            String accessToken = AccessTokenUtil.getUserAccessToken(appConfig.getAppKey(), appConfig.getAppSecret(), authCode, null, GrantTypeEnum.AUTHORIZATION_CODE.getName());
+
+            // 创建client
+            Client client = createClient();
+            // 设置user_access_token到header
+            GetUserHeaders getUserHeaders = new GetUserHeaders();
+            getUserHeaders.xAcsDingtalkAccessToken = accessToken;
             // 获取用户信息
             GetUserResponse userResponse = client.getUserWithOptions(UNION_ID, getUserHeaders, new RuntimeOptions());
-            if (!Objects.isNull(userResponse)) {
-                GetUserResponseBody body = userResponse.getBody();
-                return body;
-            } else {
-                log.error("获取用户信息响应为空！");
-            }
-        } catch (TeaException err) {
-            // 需要自己处理异常
-            if (!Common.empty(err.code) && !Common.empty(err.message)) {
-                // err 中含有 code 和 message 属性，可帮助开发定位问题
-            }
 
-        } catch (Exception _err) {
-            // 需要自己处理异常
-            TeaException err = new TeaException(_err.getMessage(), _err);
-            if (!Common.empty(err.code) && !Common.empty(err.message)) {
-                // err 中含有 code 和 message 属性，可帮助开发定位问题
-            }
+            GetUserResponseBody body = userResponse.getBody();
 
+            return body;
+
+        } catch (TeaException e) {
+            throw new InvokeDingTalkException(e.getCode(), e.getMessage());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }
