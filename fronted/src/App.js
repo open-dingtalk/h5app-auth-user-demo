@@ -12,8 +12,8 @@ function App() {
       panelHeight: "percent75",
       path: "pages/home/home", //不要改,这里是小程序dingwlanwvdmrtjjwdmd下的一个页面地址
       extraData: {
-        clientId: "*", // 应用ID(唯一标识)
-        corpId: "*", //三方企业ID
+        clientId: "***", // 应用ID(唯一标识)
+        corpId: "***", //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
         type: 0,
@@ -38,8 +38,8 @@ function App() {
     openAuthMiniApp({
       path: "pages/cancel/index",
       extraData: {
-        clientId: "ding8clxwy9wxeom7bie", // 应用ID(唯一标识)
-        corpId: "ding9f50b15bccd16741", //三方企业ID
+        clientId: "***", // 应用ID(唯一标识)
+        corpId: "***", //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
         type: 0,

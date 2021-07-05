@@ -7,11 +7,11 @@
 
 ##### 申请个人手机号信息权限
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/c5bb93ff04d14f8281b637437264905f2460.png)
+![img](https://img.alicdn.com/imgextra/i3/O1CN01Ob9ahn1d271YQHaAG_!!6000000003677-2-tps-2826-1136.png)
 
 ##### 申请通讯录个人信息读取权限
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/42805a9279204d9c98c0b605fe8c326a2460.png)
+![img](https://img.alicdn.com/imgextra/i4/O1CN01A4Y2DI27qR12lifYu_!!6000000007848-2-tps-2870-934.png)
 
 
 
@@ -27,7 +27,7 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 
 ### 修改后端服务域名&clientId&corpId
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/6ec5fb1993df4d06a9b5c35e2489cf6b2460.png)
+![img](https://img.alicdn.com/imgextra/i3/O1CN01Fxyg6F1PjFhyCzk34_!!6000000001876-2-tps-2368-1388.png)
 
 ### 使用命令行安装依赖&打包
 
@@ -35,33 +35,33 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 cd fronted/
 ```
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/3649214819e947a2852628380b05b84a2460.png)
+![img](https://img.alicdn.com/imgextra/i2/O1CN01jxPtVb1U9ax7tWtCt_!!6000000002475-2-tps-2850-658.png)
 
 ```txt
 npm install
 ```
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/b1c957a13774471dad7e997697ac6ebe2460.png)
+![img](https://img.alicdn.com/imgextra/i4/O1CN01CARq6g1CqUyEdpsdS_!!6000000000132-2-tps-2872-1290.png)
 
 ```txt
 npm run build
 ```
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/787534cb80df4e1ea4b001498c3133e32460.png)
+![img](https://img.alicdn.com/imgextra/i4/O1CN01kLve9J26L0DUmoZUQ_!!6000000007644-2-tps-1910-876.png)
 
 ### 将打包好的静态资源文件放入后端服务
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/007d4f9cab004616afddf803109b79af2460.png)
+![img](https://img.alicdn.com/imgextra/i2/O1CN01drjW6i1EQy7twIHqQ_!!6000000000347-2-tps-1766-1002.png)
 
 ### 替换应用配置
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/6e560e7afc9a434f8e659cf3859374cc2460.png)
+![img](https://img.alicdn.com/imgextra/i4/O1CN01TAoIMJ1q4U55vhBSx_!!6000000005442-2-tps-1814-1032.png)
 
 ### 启动项目使用钉钉访问服务
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/01029527c5ab4ba2b0d296d2ae4f59772460.png)
+![img](https://img.alicdn.com/imgextra/i2/O1CN011FkcHE1pt2B893Ehb_!!6000000005417-2-tps-1242-2208.png)
 
-![img](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RNErEm4k2S2KW0jV/a328aed617334cc6ad2bd4de472289242460.png)
+![img](https://img.alicdn.com/imgextra/i3/O1CN01OSsciI1X0qEO7JEuy_!!6000000002862-2-tps-1242-2208.png)
 
 ### 参考文档
 
