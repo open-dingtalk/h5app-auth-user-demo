@@ -6,14 +6,16 @@ function App() {
   //内网穿透工具介绍:
   // https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration?pnamespace=app
   // 替换成后端服务域名
-  const domain = "http://localhost:8080/";
+  const domain = "";
+  const clientId = '***';
+  const corpId = '***';
   const openMiniApp = () => {
     openAuthMiniApp({
       panelHeight: "percent75",
       path: "pages/home/home", //不要改,这里是小程序dingwlanwvdmrtjjwdmd下的一个页面地址
       extraData: {
-        clientId: "***", // 应用ID(唯一标识)
-        corpId: "***", //三方企业ID
+        clientId: clientId, // 应用ID(唯一标识)
+        corpId: corpId, //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
         type: 0,
@@ -22,7 +24,7 @@ function App() {
       },
     }).then((res) => {
       // 处理返回数据
-      axios.get(domain + "user?authCode=" + res.result.authCode)
+      axios.get(domain + "/user?authCode=" + res.result.authCode)
           .then(response => {
             alert(JSON.stringify(response))
             // console.log(response)
@@ -38,8 +40,8 @@ function App() {
     openAuthMiniApp({
       path: "pages/cancel/index",
       extraData: {
-        clientId: "***", // 应用ID(唯一标识)
-        corpId: "***", //三方企业ID
+        clientId: clientId, // 应用ID(唯一标识)
+        corpId: corpId, //三方企业ID
         rpcScope: "Contact.User.Read",
         fieldScope: "Contact.User.mobile",
         type: 0,
