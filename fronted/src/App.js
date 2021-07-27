@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { openAuthMiniApp } from "dingtalk-design-libs/biz/openAuthMiniApp";
 import { Drawer, Button, Checkbox, message, InputNumber } from 'antd';
@@ -15,13 +15,26 @@ function App() {
     checked: false,
     none: false,
     textForms: []
-  })
+  });
+  const [clientId, setClientId] = useState(null);
+  const [corpId, setCorpId] = useState(null);
+
+  useEffect(() => {
+    axios.get('/config')
+      .then(response => {
+        console.log(response, '=====');
+        setClientId(response.data.data.appKey);
+        setCorpId(response.data.data.corpId);
+      })
+  }, []);
+
+  console.log(clientId, '------', corpId);
   //内网穿透工具介绍:
   // https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration?pnamespace=app
   // 替换成后端服务域名
   const domain = "";
-  const clientId = '***';
-  const corpId = '***';
+  // const clientId = '***';
+  // const corpId = '***';
   const openMiniApp = () => {
     openAuthMiniApp({
       panelHeight: "percent75",
@@ -48,7 +61,6 @@ function App() {
         })
     })
   }
-  console.log(state, '=====')
   const cancelMiniApp = () => {
     openAuthMiniApp({
       path: "pages/cancel/index",
@@ -79,9 +91,15 @@ function App() {
       visible: false,
       checked: false
     });
+    cancelMiniApp()
   };
   const onCloses = () => {
-    state.checked ? setState({ ...state, visible: false, none: true, isLoaded: true }) : message.error('请勾选授权协议')
+    if (state.checked) {
+      setState({ ...state, visible: false, none: true, isLoaded: true })
+      openMiniApp()
+    } else {
+      message.error('请勾选授权协议')
+    }
   }
 
   const onChange = (e) => {
