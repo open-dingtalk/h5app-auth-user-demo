@@ -8,14 +8,12 @@ import axios from 'axios';
 
 function App() {
     const [clientId, setClientId] = useState(null);
-    const [corpId, setCorpId] = useState(null);
     const [userInfo, setUserInfo] = useState({});
 
     useEffect(() => {
         axios.get('/config')
             .then(response => {
                 setClientId(response.data.data.appKey);
-                setCorpId(response.data.data.corpId);
             })
     }, []);
 
@@ -29,7 +27,6 @@ function App() {
             path: "pages/home/home", //不要改,这里是小程序dingwlanwvdmrtjjwdmd下的一个页面地址
             extraData: {
                 clientId: clientId, // 应用ID(唯一标识)
-                corpId: corpId, //三方企业ID
                 rpcScope: "Contact.User.Read",
                 fieldScope: "Contact.User.mobile",
                 type: 0,
