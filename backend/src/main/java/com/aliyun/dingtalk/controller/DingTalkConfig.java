@@ -22,7 +22,6 @@ public class DingTalkConfig {
     @GetMapping("/config")
     public ServiceResult<Map> getDingTalkConfig() {
         Map<String, String> configMap = new HashMap<>();
-        configMap.put("corpId", appConfig.getCorpId());
         configMap.put("appKey", appConfig.getAppKey());
         return ServiceResult.getSuccessResult(configMap);
     }

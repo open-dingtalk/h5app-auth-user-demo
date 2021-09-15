@@ -14,7 +14,4 @@ public class AppConfig {
     @Value("${dingtalk.app_secret}")
     private String appSecret;
 
-    @Value("${dingtalk.corp_id}")
-    private String corpId;
-
 }

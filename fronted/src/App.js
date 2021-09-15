@@ -23,8 +23,6 @@ function App() {
     // https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration?pnamespace=app
     // 替换成后端服务域名
     const domain = "";
-    // const clientId = '***';
-    // const corpId = '***';
     const openMiniApp = () => {
         openAuthMiniApp({
             panelHeight: "percent75",
@@ -57,7 +55,6 @@ function App() {
             path: "pages/cancel/index",
             extraData: {
                 clientId: clientId, // 应用ID(唯一标识)
-                corpId: corpId, //三方企业ID
                 rpcScope: "Contact.User.Read",
                 fieldScope: "Contact.User.mobile",
                 type: 0,
