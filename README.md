@@ -1,7 +1,7 @@
 ## h5app-auth-user-demo
 > 钉钉用户授权获取用户信息，统一授权组件需要登陆[开发者后台](https://open-dev.dingtalk.com/)，申请**通讯录个人信息读权限**和**个人手机号信息**权限。
 >
-> **fronted**文件夹下是接入钉钉js-sdk，实现授权和取消授权功能获取authCode，之后使用npm run build打包，将打包好的静态资源放入backend子模块。
+> **frontend**文件夹下是接入钉钉js-sdk，实现授权和取消授权功能获取authCode，之后使用npm run build打包，将打包好的静态资源放入backend子模块。
 >
 > **backend**子模块是用户授权后，使用authCode获取user_access_token,之后使用user_access_token获取用户信息功能，服务启动之后，可以在钉钉中访问服务(仅支持在钉钉中使用用户授权和取消授权功能)。
 
@@ -32,7 +32,7 @@ https://github.com/open-dingtalk/h5app-auth-user-demo.git
 ### 使用命令行安装依赖&打包
 
 ```txt
-cd fronted/
+cd frontend/
 ```
 
 ![img](https://img.alicdn.com/imgextra/i2/O1CN01jxPtVb1U9ax7tWtCt_!!6000000002475-2-tps-2850-658.png)
