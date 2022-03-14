@@ -59,6 +59,12 @@ npm run build
 
 ### 启动项目使用钉钉访问服务
 
+mac启动：
+
+```txt
+./dingBoot-mac.sh start
+```
+
 ![img](https://img.alicdn.com/imgextra/i2/O1CN011FkcHE1pt2B893Ehb_!!6000000005417-2-tps-1242-2208.png)
 
 ![img](https://img.alicdn.com/imgextra/i3/O1CN01OSsciI1X0qEO7JEuy_!!6000000002862-2-tps-1242-2208.png)
