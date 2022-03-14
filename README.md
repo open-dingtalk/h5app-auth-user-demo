@@ -64,6 +64,10 @@ mac启动：
 ```txt
 ./dingBoot-mac.sh start
 ```
+![img](https://img.alicdn.com/imgextra/i3/O1CN01wol6r01UL2uPQWk0r_!!6000000002500-2-tps-1690-1716.png)
+
+浏览器访问：http://127.0.0.1:${port} ， ${port} 换成application.properties里server.port的值
+
 
 ![img](https://img.alicdn.com/imgextra/i2/O1CN011FkcHE1pt2B893Ehb_!!6000000005417-2-tps-1242-2208.png)
 
